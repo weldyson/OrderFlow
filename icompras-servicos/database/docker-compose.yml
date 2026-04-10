@@ -1,0 +1,13 @@
+services:
+  database:
+    image: postgres:16
+    container_name: db_i_compras
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: icompras
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
