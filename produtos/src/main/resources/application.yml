@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: icomprasprodutos
+  datasource:
+  # Default to the database created by docker-compose (POSTGRES_DB=icompras). You can override with env vars.
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/icompras}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+        hibernate:
+            format_sql: true
+
+server:
+  port: 8081
+
+
+
