@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### PostgreSQL / Banco ###
+data/
+postgres-data/
+*.pid
+*.init
+pg_*
