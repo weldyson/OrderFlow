@@ -23,7 +23,7 @@ public class ProdutoController {
     @GetMapping("{codigo}")
     public ResponseEntity<Produto> obterDados(@PathVariable("codigo") Long codigo) {
         return service
-                .obterPorCodigos(codigo)
+                .obterPorCodigo(codigo)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }

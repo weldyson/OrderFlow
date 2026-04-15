@@ -18,7 +18,7 @@ public class ProdutoService {
         return repository.save(produto);
     }
 
-    public Optional<Produto> obterPorCodigos(Long codigo){
+    public Optional<Produto> obterPorCodigo(Long codigo){
         return repository.findById(codigo);
     }
 
