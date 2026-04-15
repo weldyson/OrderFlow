@@ -31,3 +31,13 @@ build/
 
 ### VS Code ###
 .vscode/
+
+database/data/
+icompras-servicos/database/data/
+
+icompras-servicos/data/
+icompras-clientes/data/
+icompras-servicos/data/
+icompras-produtos/data/
+database/data/
+
