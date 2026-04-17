@@ -1,4 +1,6 @@
-package io.github.weldyson.orderflow.pedidos.controller.DTO;
+package io.github.weldyson.orderflow.pedidos.controller.dto;
 
-public record NovoPedidoDTO() {
+import java.util.List;
+
+public record NovoPedidoDTO(Long codigoCliente, DadosPagamentoDTO dadosPagamento, List<ItemPedidoDTO> itens) {
 }

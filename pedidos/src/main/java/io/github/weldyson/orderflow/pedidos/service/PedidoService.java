@@ -1,6 +1,8 @@
 package io.github.weldyson.orderflow.pedidos.service;
 
 
+import io.github.weldyson.orderflow.pedidos.controller.PedidoController;
+import io.github.weldyson.orderflow.pedidos.model.Pedido;
 import io.github.weldyson.orderflow.pedidos.repository.ItemPedidoRepository;
 import io.github.weldyson.orderflow.pedidos.repository.PedidoRepository;
 import io.github.weldyson.orderflow.pedidos.validator.PedidoValidator;
@@ -14,5 +16,10 @@ public class PedidoService {
     private final PedidoRepository repository;
     private final ItemPedidoRepository itemPedidoRepository;
     private final PedidoValidator validator;
+
+
+    public Pedido criarPedido(Pedido pedido) {
+        return null;
+    }
 
 }
