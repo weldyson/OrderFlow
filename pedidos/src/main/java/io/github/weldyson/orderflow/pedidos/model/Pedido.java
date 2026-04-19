@@ -1,5 +1,6 @@
 package io.github.weldyson.orderflow.pedidos.model;
 
+import io.github.weldyson.orderflow.pedidos.controller.dto.DadosPagamentoDTO;
 import io.github.weldyson.orderflow.pedidos.model.enums.StatusPedido;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -8,6 +9,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "pedido")
@@ -44,5 +46,13 @@ public class Pedido {
 
     @Column(name = "url_nf")
     private String urlNotaFisal;
+
+    @Transient
+    private DadosPagamento dadosPagamento;
+
+    @OneToMany(mappedBy = "codigoPedido")
+    private List<ItemPedido> itens;
+
+
 
 }
