@@ -1,7 +1,7 @@
 package io.github.weldyson.orderflow.pedidos.service;
 
 
-import io.github.weldyson.orderflow.pedidos.controller.PedidoController;
+
 import io.github.weldyson.orderflow.pedidos.model.Pedido;
 import io.github.weldyson.orderflow.pedidos.repository.ItemPedidoRepository;
 import io.github.weldyson.orderflow.pedidos.repository.PedidoRepository;
@@ -19,7 +19,9 @@ public class PedidoService {
 
 
     public Pedido criarPedido(Pedido pedido) {
-        return null;
+        repository.save(pedido);
+        itemPedidoRepository.saveAll(pedido.getItens());
+        return pedido;
     }
 
 }

@@ -4,11 +4,13 @@ import io.github.weldyson.orderflow.pedidos.controller.dto.ItemPedidoDTO;
 import io.github.weldyson.orderflow.pedidos.controller.dto.NovoPedidoDTO;
 import io.github.weldyson.orderflow.pedidos.model.ItemPedido;
 import io.github.weldyson.orderflow.pedidos.model.Pedido;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.Named;
+import io.github.weldyson.orderflow.pedidos.model.enums.StatusPedido;
+import org.jspecify.annotations.NonNull;
+import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Mapper(componentModel = "spring")
@@ -23,6 +25,23 @@ public interface PedidoMapper {
     @Named("mapItens")
     default  List<ItemPedido> mapItens(List<ItemPedidoDTO> dtos) {
         return  dtos.stream().map(ITEM_PEDIDO_MAPPER::map).toList();
+    }
 
+    @AfterMapping
+    default void afterMapping(@MappingTarget Pedido pedido) {
+        pedido.setStatus(StatusPedido.REALIZADO);
+        pedido.setDataPedido(LocalDateTime.now());
+
+        var total = calcularTotal(pedido);
+
+        pedido.setTotal(total);
+
+        pedido.getItens().forEach(itemPedido -> itemPedido.setPedido(pedido));
+    }
+
+    private static @NonNull BigDecimal calcularTotal(Pedido pedido) {
+        return pedido.getItens().stream().map(itemPedido ->
+                itemPedido.getValorUnitario().multiply(BigDecimal.valueOf(itemPedido.getQuantidade()))
+        ).reduce(BigDecimal.ZERO, BigDecimal::add).abs();
     }
 }

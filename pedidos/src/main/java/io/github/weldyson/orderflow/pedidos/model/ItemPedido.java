@@ -19,8 +19,9 @@ public class ItemPedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long codigo;
 
-    @Column(name = "codigo_pedido", nullable = false)
-    private Long codigoPedido;
+    @JoinColumn(name = "codigo_pedido", nullable = false)
+    @ManyToOne
+    private Pedido pedido;
 
     @Column(name = "codigo_produto", nullable = false)
     private Long codigoProduto;
@@ -30,6 +31,7 @@ public class ItemPedido {
 
     @Column(name = "valor_unitario", precision = 16, scale = 2, nullable = false)
     private BigDecimal valorUnitario;
+
 
 
 
