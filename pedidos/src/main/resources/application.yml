@@ -18,3 +18,12 @@ spring:
 
 server:
   port: 8080
+
+  OrderFlow:
+    pedidos:
+      clients:
+        produtos:
+          url: ${PRODUTOS_URL:http://localhost:8081/produtos}
+        clientes:
+            url: ${CLIENTES_URL:http://localhost:8082/clientes}
+
