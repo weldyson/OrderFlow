@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c15a8de-0fd8-4616-bb1d-40edb418e383" name="Changes" comment="" />
+    <list default="true" id="5c15a8de-0fd8-4616-bb1d-40edb418e383" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes/src/test/java/io/github/weldyson/orderflow/clientes/ClientesApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedidos/src/main/java/io/github/weldyson/orderflow/pedidos/validator/PedidoValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/pedidos/src/main/java/io/github/weldyson/orderflow/pedidos/validator/PedidoValidator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +23,26 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Record" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;weldyson&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/weldyson/OrderFlow.git&quot;,
+    &quot;accountId&quot;: &quot;21f3282d-1053-4f2f-8239-2df87ec681b7&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -103,8 +121,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.101" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.101" />
       </set>
     </attachedChunks>
   </component>
@@ -117,6 +135,9 @@
       <updated>1777310205842</updated>
       <workItem from="1777310207684" duration="2814000" />
       <workItem from="1777331364554" duration="108000" />
+      <workItem from="1777922490663" duration="130000" />
+      <workItem from="1777998225267" duration="41000" />
+      <workItem from="1778514329797" duration="1496000" />
     </task>
     <servers />
   </component>
